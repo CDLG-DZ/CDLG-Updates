@@ -9,123 +9,366 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Traditional Arabic', sans-serif;
             margin: 0;
-            padding: 16px 20px;
-            background: #fbfbfb;
-            color: #2c3e50;
+            padding: 14px 18px;
+            background: #f8fafc;
+            color: #1e293b;
             font-size: 13px;
-            line-height: 1.55;
+            line-height: 1.5;
         }
+        
+        /* En-tête avec switch de langue */
         .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             border-bottom: 2px solid #2e7d32;
             padding-bottom: 12px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
+        .header-main {
+            flex: 1;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: #e2e8f0;
+            padding: 3px;
+            border-radius: 20px;
+            border: 1px solid #cbd5e1;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #475569;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: #ffffff;
+            color: #1b5e20;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        .lang-btn:hover:not(.active) {
+            background: rgba(255,255,255,0.6);
+            color: #0f172a;
+        }
+
         .badge {
             background: linear-gradient(135deg, #2e7d32, #1b5e20);
             color: #ffffff;
             font-size: 11px;
-            font-weight: 600;
-            padding: 4px 10px;
+            font-weight: 700;
+            padding: 3px 10px;
             border-radius: 12px;
             display: inline-block;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         h1 {
-            font-size: 18px;
-            color: #1b5e20;
-            margin: 4px 0 2px 0;
+            font-size: 17px;
+            color: #0f172a;
+            margin: 3px 0 2px 0;
             font-weight: 700;
         }
         .subtitle {
             font-size: 12px;
-            color: #555;
+            color: #64748b;
             margin: 0;
         }
+
+        /* Barre de Légende / Palette */
+        .legend-bar {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-bottom: 14px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .legend-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 4px;
+        }
+        .legend-tag {
+            display: inline-flex;
+            align-items: center;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        
+        /* Variantes de couleurs */
+        .cat-green {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .cat-green .legend-dot { background: #10b981; }
+
+        .cat-blue {
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+        }
+        .cat-blue .legend-dot { background: #3b82f6; }
+
+        .cat-purple {
+            background: #faf5ff;
+            color: #6b21a8;
+            border: 1px solid #e9d5ff;
+        }
+        .cat-purple .legend-dot { background: #a855f7; }
+
+        /* Cartes de contenu */
         .card {
             background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-left: 4px solid #2e7d32;
-            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
             padding: 12px 14px;
-            margin-bottom: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            position: relative;
         }
-        .card.perf {
-            border-left-color: #0288d1;
+        
+        /* Bordures LTR (par défaut Français) */
+        body[dir="ltr"] .card.c-green { border-left: 4px solid #10b981; }
+        body[dir="ltr"] .card.c-blue  { border-left: 4px solid #3b82f6; }
+        body[dir="ltr"] .card.c-purple{ border-left: 4px solid #a855f7; }
+
+        /* Bordures RTL (Arabe) */
+        body[dir="rtl"] .card.c-green { border-right: 4px solid #10b981; border-left: 1px solid #e2e8f0; }
+        body[dir="rtl"] .card.c-blue  { border-right: 4px solid #3b82f6; border-left: 1px solid #e2e8f0; }
+        body[dir="rtl"] .card.c-purple{ border-right: 4px solid #a855f7; border-left: 1px solid #e2e8f0; }
+
+        body[dir="rtl"] .legend-dot {
+            margin-right: 0;
+            margin-left: 6px;
         }
-        .card.secu {
-            border-left-color: #f57c00;
+        body[dir="rtl"] .legend-title {
+            margin-right: 0;
+            margin-left: 4px;
+        }
+
+        .card-header-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
         }
         .card-title {
             font-size: 13px;
             font-weight: 700;
-            margin: 0 0 8px 0;
+            margin: 0;
             display: flex;
             align-items: center;
         }
-        .card-title.green { color: #1b5e20; }
-        .card-title.blue { color: #0277bd; }
-        .card-title.orange { color: #e65100; }
+        .card-title.c-green { color: #065f46; }
+        .card-title.c-blue  { color: #1e40af; }
+        .card-title.c-purple{ color: #6b21a8; }
 
         ul {
             margin: 0;
             padding-left: 18px;
         }
+        body[dir="rtl"] ul {
+            padding-left: 0;
+            padding-right: 18px;
+        }
         li {
             margin-bottom: 6px;
-            color: #37474f;
+            color: #334155;
+        }
+        li:last-child {
+            margin-bottom: 0;
         }
         li strong {
-            color: #212121;
+            color: #0f172a;
         }
+
         .footer {
-            margin-top: 16px;
+            margin-top: 14px;
             padding-top: 10px;
-            border-top: 1px dashed #cfd8dc;
+            border-top: 1px dashed #cbd5e1;
             text-align: center;
             font-size: 11px;
-            color: #78909c;
+            color: #64748b;
         }
+
+        /* Masquage selon la langue */
+        body[data-lang="fr"] .lang-ar { display: none !important; }
+        body[data-lang="ar"] .lang-fr { display: none !important; }
     </style>
 </head>
-<body>
+<body dir="ltr" data-lang="fr">
+
     <div class="header">
-        <span class="badge">Mise à jour v1.3.1</span>
-        <h1>LOGI COM — Notes de Version</h1>
-        <p class="subtitle">Déploiement officiel et optimisations certifiées CDLG</p>
+        <div class="header-main">
+            <!-- Français -->
+            <div class="lang-fr">
+                <span class="badge">Mise à jour v1.3.1</span>
+                <h1>LOGI COM — Notes de Version</h1>
+                <p class="subtitle">Déploiement officiel et optimisations certifiées CDLG</p>
+            </div>
+            <!-- Arabe -->
+            <div class="lang-ar">
+                <span class="badge">تحديث البرنامج v1.3.1</span>
+                <h1>لوجي كوم (LOGI COM) — تفاصيل الإصدار الجديد</h1>
+                <p class="subtitle">التوزيع الرسمي والتحسينات المعتمدة من شركة CDLG للبرمجيات</p>
+            </div>
+        </div>
+
+        <!-- Boutons de sélection de langue -->
+        <div class="lang-switch">
+            <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
+            <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
+        </div>
     </div>
 
-    <div class="card">
-        <div class="card-title green">🚀 Nouveautés & Fonctionnalités</div>
-        <ul>
-            <li><strong>Mise à jour en 1 clic :</strong> Vous pouvez vérifier et installer automatiquement les nouvelles versions depuis l'onglet <em>Outils &gt; Données</em>.</li>
-            <li><strong>Synchronisation automatique :</strong> Contrôle et mise en conformité immédiate de vos dossiers d'exercices à l'ouverture.</li>
+    <!-- Palette & Légende explicative -->
+    <div class="legend-bar">
+        <div class="lang-fr" style="display:inline-flex; align-items:center; flex-wrap:wrap; gap:8px;">
+            <span class="legend-title">Palette des changements :</span>
+            <span class="legend-tag cat-green"><span class="legend-dot"></span>🟢 Options & Fonctions Métier</span>
+            <span class="legend-tag cat-blue"><span class="legend-dot"></span>🔵 Ergonomie & Confort d'usage</span>
+            <span class="legend-tag cat-purple"><span class="legend-dot"></span>🟣 Moteur & Sécurité Système</span>
+        </div>
+        <div class="lang-ar" style="display:inline-flex; align-items:center; flex-wrap:wrap; gap:8px;">
+            <span class="legend-title">دليل وتصنيف الألوان :</span>
+            <span class="legend-tag cat-green"><span class="legend-dot"></span>🟢 ميزات وخيارات تجارية</span>
+            <span class="legend-tag cat-blue"><span class="legend-dot"></span>🔵 سلاسة وراحة الاستخدام</span>
+            <span class="legend-tag cat-purple"><span class="legend-dot"></span>🟣 النظام والأمان الداخلي</span>
+        </div>
+    </div>
+
+    <!-- Section 1 : Fonctions Métier & Options (Vert) -->
+    <div class="card c-green">
+        <div class="card-header-line">
+            <div class="card-title c-green">
+                <span class="lang-fr">🚀 Nouveautés & Fonctionnalités Métier</span>
+                <span class="lang-ar">🚀 الميزات والخيارات التجارية الجديدة</span>
+            </div>
+            <span class="legend-tag cat-green">
+                <span class="lang-fr">Options Métier</span>
+                <span class="lang-ar">خيارات تجارية</span>
+            </span>
+        </div>
+        
+        <ul class="lang-fr">
+            <li><strong>Mise à jour automatique en 1 clic :</strong> Vous pouvez vérifier et installer directement les nouvelles versions depuis l'onglet <em>Outils &gt; Données</em>.</li>
+            <li><strong>Synchronisation automatique des dossiers :</strong> Contrôle et mise en conformité immédiate de vos exercices comptables et commerciaux à chaque ouverture.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>تحديث بضغطة زر واحدة :</strong> يمكنك الآن فحص وتثبيت أحدث التحديثات تلقائياً عبر شريط القوائم <em>أدوات (Outils) &gt; البيانات (Données)</em>.</li>
+            <li><strong>مزامنة فورية للملفات والسنوات المالية :</strong> فحص ومطابقة آلية لقواعد بيانات ملفات التسيير فور فتحها لضمان التوافق التام.</li>
         </ul>
     </div>
 
-    <div class="card perf">
-        <div class="card-title blue">⚡ Performances & Fluidité</div>
-        <ul>
-            <li><strong>Migration transparente des configurations :</strong> Vos serveurs, instances SQL et ports réseau restent strictement mémorisés sans réinitialisation.</li>
+    <!-- Section 2 : Ergonomie & Confort d'usage (Bleu) -->
+    <div class="card c-blue">
+        <div class="card-header-line">
+            <div class="card-title c-blue">
+                <span class="lang-fr">⚡ Ergonomie, Affichage & Confort</span>
+                <span class="lang-ar">⚡ السلاسة، العرض وراحة الاستخدام</span>
+            </div>
+            <span class="legend-tag cat-blue">
+                <span class="lang-fr">Confort & Affichage</span>
+                <span class="lang-ar">الراحة والعرض</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Migration transparente des configurations :</strong> Vos serveurs, instances SQL et ports réseau restent strictement conservés sans réinitialisation.</li>
             <li><strong>Conservation de vos structures d'écrans :</strong> Vos colonnes, largeurs et filtres personnalisés dans <em>Mise En Page</em> restent 100% intacts.</li>
-            <li><strong>Gain de rapidité :</strong> Traitements accélérés sur les historiques de ventes, achats et stocks.</li>
+            <li><strong>Gain de rapidité :</strong> Traitements accélérés sur la consultation des historiques de ventes, achats et stocks.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>ترحيل ذكي للإعدادات :</strong> حفظ تلقائي لمعلومات الاتصال بالخادم، وقواعد البيانات SQL والمنافذ دون الحاجة لإعادة ضبطها بعد التحديث.</li>
+            <li><strong>الحفاظ التام على تخطيط الشاشات :</strong> ترتيب الأعمدة، العروض المخصصة والفلاتر داخل <em>«تخطيط الصفحة (Mise En Page)»</em> تبقى محفوظة 100%.</li>
+            <li><strong>زيادة في سرعة المعالجة :</strong> سلاسة وسرعة فائقة أثناء تصفح والبحث في سجلات المبيعات، المشتريات ومخزون السلع.</li>
         </ul>
     </div>
 
-    <div class="card secu">
-        <div class="card-title orange">🛡️ Sécurité & Intégrité</div>
-        <ul>
-            <li><strong>Scellement d'intégrité SHA-256 :</strong> Contrôle cryptographique avant toute installation pour garantir un fichier sain.</li>
-            <li><strong>Chiffrement binaire Obfuscar :</strong> Masquage complet des requêtes et informations sensibles.</li>
-            <li><strong>Extracteur autonome :</strong> Aucun outil tiers (WinRAR / 7-Zip) n'est nécessaire sur vos postes.</li>
+    <!-- Section 3 : Technique & Moteur Système (Violet) -->
+    <div class="card c-purple">
+        <div class="card-header-line">
+            <div class="card-title c-purple">
+                <span class="lang-fr">🛡️ Moteur Système, Sécurité & Intégrité</span>
+                <span class="lang-ar">🛡️ النظام، الأمان وموثوقية البيانات</span>
+            </div>
+            <span class="legend-tag cat-purple">
+                <span class="lang-fr">Moteur Système</span>
+                <span class="lang-ar">أمان النظام</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Scellement d'intégrité SHA-256 :</strong> Contrôle cryptographique avant chaque installation garantissant l'origine certifiée du fichier.</li>
+            <li><strong>Protection binaire Obfuscar :</strong> Chiffrement et protection des données sensibles et requêtes métier.</li>
+            <li><strong>Extracteur autonome intégré :</strong> Aucun outil tiers (WinRAR / 7-Zip) n'est requis sur le poste client pour finaliser l'installation.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>شهادة سلامة وتطابق إلكتروني SHA-256 :</strong> فحص رقمي مشفر قبل التثبيت يضمن خلو الملف من أي تلف ومطابقته للنسخة الرسمية.</li>
+            <li><strong>حماية برمجية متقدمة Obfuscar :</strong> تشفير وحماية مشددة لبيانات البرنامج والاتصال الداخلي.</li>
+            <li><strong>برنامج فك ضغط مستقل مدمج :</strong> يتم تثبيت التحديث ذاتياً دون الحاجة لوجود برامج خارجية مثل WinRAR أو 7-Zip على حاسوبك.</li>
         </ul>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
-        CDLG Développement &bull; Gamme de Gestion Professionnelle &bull; Tous droits réservés
+        <div class="lang-fr">
+            CDLG Développement &bull; Gamme de Gestion Professionnelle &bull; Tous droits réservés
+        </div>
+        <div class="lang-ar">
+            تطوير وبرمجة CDLG &bull; باقة البرمجيات الاحترافية للتسيير &bull; جميع الحقوق محفوظة
+        </div>
     </div>
+
+    <script type="text/javascript">
+        function setLanguage(lang) {
+            var body = document.body;
+            var btnFr = document.getElementById('btn-fr');
+            var btnAr = document.getElementById('btn-ar');
+
+            if (lang === 'ar') {
+                body.setAttribute('dir', 'rtl');
+                body.setAttribute('data-lang', 'ar');
+                document.documentElement.setAttribute('lang', 'ar');
+                btnAr.className = 'lang-btn active';
+                btnFr.className = 'lang-btn';
+            } else {
+                body.setAttribute('dir', 'ltr');
+                body.setAttribute('data-lang', 'fr');
+                document.documentElement.setAttribute('lang', 'fr');
+                btnFr.className = 'lang-btn active';
+                btnAr.className = 'lang-btn';
+            }
+        }
+    </script>
 </body>
 </html>

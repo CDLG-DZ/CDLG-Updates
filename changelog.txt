@@ -1,0 +1,32 @@
+======================================================================
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.0
+======================================================================
+
+Cette nouvelle version apporte des évolutions importantes pour votre 
+confort, la rapidité de vos traitements et la sécurité de vos données :
+
+----------------------------------------------------------------------
+🚀 NOUVEAUTÉS & FONCTIONNALITÉS
+----------------------------------------------------------------------
+• Mise à jour simplifiée :
+  Vérifiez et appliquez les dernières nouveautés en un clic depuis 
+  l'onglet Outils > Données, sans manipulation technique.
+
+• Synchronisation intelligente des dossiers :
+  Contrôle automatique de conformité entre le logiciel et vos exercices 
+  dès leur ouverture pour sécuriser vos calculs et vos données.
+
+----------------------------------------------------------------------
+⚡ PERFORMANCES & SÉCURITÉ
+----------------------------------------------------------------------
+• Optimisation des temps de traitement sur les historiques d'achats, 
+  de ventes et la gestion des stocks.
+
+• Sécurisation renforcée des données lors des sauvegardes / restaurations.
+
+• Vos personnalisations d'affichage (mises en page, colonnes et filtres) 
+  sont strictement conservées.
+
+======================================================================
+  CDLG Développement - Tous droits réservés
+======================================================================

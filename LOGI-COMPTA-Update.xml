@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item>
+    <version>2.0.0</version>
+    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v2.0.0/LOGI-COMPTA_v2.0.0.zip</url>
+    <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog.html</changelog>
+    <mandatory>false</mandatory>
+    <checksum algorithm="SHA256"></checksum>
+</item>

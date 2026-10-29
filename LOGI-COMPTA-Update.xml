@@ -4,5 +4,5 @@
     <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v2.0.0/LOGI-COMPTA_v2.0.0.zip</url>
     <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog-compta.html</changelog>
     <mandatory>false</mandatory>
-    <checksum algorithm="SHA256"></checksum>
+    <checksum algorithm="SHA256">82D15C5566E6106779F6473E016B4C20D5959C793DCA8EC318BA3E31D1CB8A8B</checksum>
 </item>

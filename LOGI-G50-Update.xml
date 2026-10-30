@@ -4,5 +4,5 @@
     <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.0-g50/LOGI-G50_v1.0.0.zip</url>
     <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog-g50.html</changelog>
     <mandatory>false</mandatory>
-    <checksum algorithm="SHA256"></checksum>
+    <checksum algorithm="SHA256">48DE4DBE43BB40C40A58B613A0CD4A6DE295C969BA7B76A8B68CB0CD41A7E5AC</checksum>
 </item>

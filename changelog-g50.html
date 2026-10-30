@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notes de mise à jour - LOGI-G50</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Traditional Arabic', sans-serif;
+            margin: 0;
+            padding: 14px 18px;
+            background: #f8fafc;
+            color: #1e293b;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        /* En-tête avec switch de langue */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #8b5cf6;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .header-main {
+            flex: 1;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: #e2e8f0;
+            padding: 3px;
+            border-radius: 20px;
+            border: 1px solid #cbd5e1;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #475569;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: #ffffff;
+            color: #5b21b6;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        .lang-btn:hover:not(.active) {
+            background: rgba(255,255,255,0.6);
+            color: #0f172a;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        h1 {
+            font-size: 17px;
+            color: #0f172a;
+            margin: 3px 0 2px 0;
+            font-weight: 700;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .legend-tag {
+            display: inline-flex;
+            align-items: center;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        
+        .cat-purple {
+            background: #faf5ff;
+            color: #6b21a8;
+            border: 1px solid #e9d5ff;
+        }
+        .cat-purple .legend-dot { background: #8b5cf6; }
+
+        .cat-green {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .cat-green .legend-dot { background: #10b981; }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            position: relative;
+        }
+        
+        body[dir="ltr"] .card.c-purple { border-left: 4px solid #8b5cf6; }
+        body[dir="ltr"] .card.c-green  { border-left: 4px solid #10b981; }
+
+        body[dir="rtl"] .card.c-purple { border-right: 4px solid #8b5cf6; border-left: 1px solid #e2e8f0; }
+        body[dir="rtl"] .card.c-green  { border-right: 4px solid #10b981; border-left: 1px solid #e2e8f0; }
+
+        body[dir="rtl"] .legend-dot {
+            margin-right: 0;
+            margin-left: 6px;
+        }
+
+        .card-header-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .card-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .card-title.c-purple { color: #6b21a8; }
+        .card-title.c-green  { color: #065f46; }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        body[dir="rtl"] ul {
+            padding-left: 0;
+            padding-right: 18px;
+        }
+        li {
+            margin-bottom: 6px;
+            color: #334155;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+        li strong {
+            color: #0f172a;
+        }
+
+        .footer {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px dashed #cbd5e1;
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        body[data-lang="fr"] .lang-ar { display: none !important; }
+        body[data-lang="ar"] .lang-fr { display: none !important; }
+    </style>
+</head>
+<body dir="ltr" data-lang="fr">
+
+    <div class="header">
+        <div class="header-main">
+            <!-- Français -->
+            <div class="lang-fr">
+                <span class="badge">Mise à jour v1.0.0</span>
+                <h1>LOGI-G50 — Notes de Version</h1>
+                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0</p>
+            </div>
+            <!-- Arabe -->
+            <div class="lang-ar">
+                <span class="badge">تحديث البرنامج v1.0.0</span>
+                <h1>لوجي جي 50 (LOGI-G50) — تفاصيل الإصدار الجديد</h1>
+                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0</p>
+            </div>
+        </div>
+
+        <div class="lang-switch">
+            <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
+            <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
+        </div>
+    </div>
+
+    <!-- Section 1 : Ergonomie & Authentification (Violet) -->
+    <div class="card c-purple">
+        <div class="card-header-line">
+            <div class="card-title c-purple">
+                <span class="lang-fr">🎨 Interface Unifiée & Sécurité CDLG</span>
+                <span class="lang-ar">🎨 الواجهة الموحدة ونظام الأمان المعتمد</span>
+            </div>
+            <span class="legend-tag cat-purple">
+                <span class="lang-fr">Authentification</span>
+                <span class="lang-ar">تسجيل الدخول</span>
+            </span>
+        </div>
+        
+        <ul class="lang-fr">
+            <li><strong>Écran de connexion compact unifié :</strong> Format officiel 330×240 px avec barre distinctive violette <span style="color:#8b5cf6; font-weight:bold;">#8B5CF6</span>.</li>
+            <li><strong>Codes secrets universels :</strong> Accès direct <span style="font-family:monospace; background:#f1f5f9; padding:1px 4px; border-radius:3px;">*150*</span> (Rattachement base G50), <span style="font-family:monospace; background:#f1f5f9; padding:1px 4px; border-radius:3px;">*170*</span> (Configuration SQL) et <span style="font-family:monospace; background:#f1f5f9; padding:1px 4px; border-radius:3px;">*999*</span> (Licence).</li>
+            <li><strong>Protection anti-brute-force :</strong> Verrouillage temporaire sécurisé après tentatives erronées répétées.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>واجهة دخول موحدة ومضغوطة :</strong> المقاس الرسمي 330×240 بكسل مع الشريط الجانبي البنفسجي المميز.</li>
+            <li><strong>الرموز السرية الشاملة :</strong> وصول مباشر وفوري عبر الرموز *150* (ربط قاعدة البيانات)، *170* (إعدادات الخادم) و *999* (ترخيص البرنامج).</li>
+            <li><strong>حماية ضد محاولات التخمين :</strong> قفل أمني مؤقت ومحكم عند إدخال كلمات مرور خاطئة متكررة.</li>
+        </ul>
+    </div>
+
+    <!-- Section 2 : Moteur de Données & Mises à Jour (Vert) -->
+    <div class="card c-green">
+        <div class="card-header-line">
+            <div class="card-title c-green">
+                <span class="lang-fr">⚙️ Base de Données & Mises à Jour en 1 Clic</span>
+                <span class="lang-ar">⚙️ قاعدة البيانات والتحديث المباشر</span>
+            </div>
+            <span class="legend-tag cat-green">
+                <span class="lang-fr">Système & Données</span>
+                <span class="lang-ar">النظام وقواعد البيانات</span>
+            </span>
+        </div>
+        
+        <ul class="lang-fr">
+            <li><strong>Rattachement blindé avec redémarrage :</strong> Rechargement automatique de l'application après rattachement de la base G50.</li>
+            <li><strong>Auto-migration silencieuse de la structure :</strong> Élimination des boutons manuels obsolètes pour protéger les données clients.</li>
+            <li><strong>Mises à jour automatiques via GitHub :</strong> Recherche et téléchargement direct depuis le sous-menu <em>Aide &gt; Rechercher les mises à jour...</em>.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>ربط فوري لقاعدة البيانات مع إعادة تشغيل تلقائية :</strong> ضمان تحديث واستقرار الاتصال بالخادم مباشرة بعد الربط.</li>
+            <li><strong>ترقية صامتة وآلية لبنية البيانات :</strong> إخفاء الأزرار اليدوية السابقة لحماية جداول وقواعد البيانات من أي تعديل خاطئ.</li>
+            <li><strong>تحديث تلقائي عبر GitHub :</strong> فحص وتثبيت التحديثات بضغطة زر واحدة من قائمة <em>مساعدة &gt; البحث عن التحديثات...</em>.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        CDLG Informatique • Gamme Professionnelle de Gestion • Tous droits réservés
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            
+            document.getElementById('btn-fr').className = 'lang-btn' + (lang === 'fr' ? ' active' : '');
+            document.getElementById('btn-ar').className = 'lang-btn' + (lang === 'ar' ? ' active' : '');
+        }
+    </script>
+</body>
+</html>

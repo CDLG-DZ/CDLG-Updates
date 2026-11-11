@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <item>
-    <version>1.0.0</version>
-    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.0-basma/LOGI-BASMA_v1.0.0.zip</url>
+    <version>1.0.1</version>
+    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.1-basma/LOGI-BASMA_v1.0.1.zip</url>
     <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog-basma.html</changelog>
     <mandatory>false</mandatory>
-    <checksum algorithm="SHA256">DFB46A04179D729F3BCE29EA5C65F4977D7981731A5C090FC127143A7F41C413</checksum>
+    <checksum algorithm="SHA256">51CE939FDE39B41D0344499FDCD523FB648E322812A61B89CBB60436263A14CF</checksum>
 </item>

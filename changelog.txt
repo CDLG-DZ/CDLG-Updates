@@ -1,29 +1,35 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.1
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.2
 ======================================================================
 
-Cette version 1.3.1 valide le fonctionnement de l'auto-update automatique
-et intègre les dernières optimisations de sécurité et de performances :
+Cette version 1.3.2 apporte une refonte majeure et la fiabilisation complète
+du module d'extraction des données commerciales CNRC (Sidjilcom) :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.1)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.2)
 ----------------------------------------------------------------------
-• Système d'auto-update officiel :
-  Mise à jour entièrement automatisée en 1 clic via GitHub Releases.
+• Module CNRC Sidjilcom nouvelle génération :
+  - Recherche bidirectionnelle intelligente (par N° RC ou par Raison Sociale).
+  - Décomposition universelle des formats de registres de commerce algériens
+    (souches principales, secondaires avec wilayas permutées, formats historiques).
+  - Prise en charge complète des établissements secondaires (Personnes Morales
+    et Personnes Physiques).
+  - Détection précise de l'état officiel du registre (Radié, Actif/Conforme,
+    Actif/Non conforme) avec avertissement interactif de confirmation.
 
-• Migration automatique des paramètres réseaux :
-  Vos configurations de serveurs, instances SQL et ports sont désormais
-  préservées sans aucune réinitialisation entre les versions.
-
-• Conservation des structures d'écrans :
-  Vos mises en page et personnalisations de colonnes sont 100% garanties.
+• Fiche Tiers & Fiche Dossier :
+  - Règle métier : Priorité absolue accordée au Nom Commercial pour les PP.
+  - Contrôle proactif anti-doublon sur le NIF dès la validation de la recherche.
+  - Mapping automatique des identifiants réels de Wilayas et Communes.
+  - Remplissage automatique et harmonisé du régime juridique.
 
 ----------------------------------------------------------------------
-⚡ SÉCURITÉ & FIABILITÉ
+⚡ SÉCURITÉ & PERFORMANCES
 ----------------------------------------------------------------------
+• Package de mise à jour ultra-léger optimisé pour une installation instantanée.
 • Signature d'intégrité par scellement cryptographique SHA-256.
-• Obfuscation et chiffrement des données sensibles.
-• Protection renforcée contre toute altération réseau.
+• Obfuscation et durcissement du binaire principal contre la rétro-ingénierie.
+• Zéro modification des configurations réseaux et chaînes de connexion locales.
 
 ======================================================================
   CDLG Développement - Tous droits réservés

@@ -198,15 +198,15 @@
         <div class="header-main">
             <!-- Français -->
             <div class="lang-fr">
-                <span class="badge">Nouveautés v1.0.3</span>
+                <span class="badge">Nouveautés v1.0.4</span>
                 <h1>LOGI-G50 — Notes de Version</h1>
-                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0.3</p>
+                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0.4</p>
             </div>
             <!-- Arabe -->
             <div class="lang-ar">
-                <span class="badge">الجديد في الإصدار v1.0.3</span>
+                <span class="badge">الجديد في الإصدار v1.0.4</span>
                 <h1>لوجي جي 50 (LOGI-G50) — تفاصيل الإصدار الجديد</h1>
-                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0.3</p>
+                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0.4</p>
             </div>
         </div>
 
@@ -214,6 +214,36 @@
             <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
             <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
         </div>
+    </div>
+
+    <!-- Section 0 : Nouveautés v1.0.4 (Bleu) -->
+    <div class="card c-blue">
+        <div class="card-header-line">
+            <div class="card-title c-blue">
+                <span class="lang-fr">✨ Améliorations Import LOGICOM & Interface (v1.0.4)</span>
+                <span class="lang-ar">✨ تحسينات استيراد LOGICOM والواجهة (v1.0.4)</span>
+            </div>
+            <span class="legend-tag cat-blue">
+                <span class="lang-fr">Nouveau v1.0.4</span>
+                <span class="lang-ar">جديد v1.0.4</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Sélection de dossier sécurisée :</strong> Aucun dossier LOGICOM n'est présélectionné par défaut pour un nouveau dossier G50 afin d'éviter toute erreur d'importation (champ obligatoire signalé).</li>
+            <li><strong>Détection intelligente des doublons :</strong> Comparaison basée sur la date, le dossier, le fournisseur résolu dans LOGI-G50, la rubrique système et le montant HT avec prise en compte de la tolérance configurée (<em>Écart TVA</em>).</li>
+            <li><strong>Grille LOGICOM enrichie :</strong> Ligne de filtres, regroupement par mois, totaux en pied de tableau, alertes visuelles sur NIF manquant et écarts TTC (avec tolérance) ainsi que mémorisation de la taille et position de la fenêtre.</li>
+            <li><strong>Période synchronisée sur l'exercice :</strong> Les champs <em>Date Du</em> et <em>Date Au</em> s'ajustent automatiquement sur l'exercice sélectionné (ex. 2025 ou 2026).</li>
+            <li><strong>Interface & ergonomie :</strong> Bouton <em>Importer sél.</em> déplacé en haut avec icônes et infobulle, suppression de la transparence du menu latéral droit et corrections d'orthographe dans la fenêtre Achats.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>اختيار آمن للملف :</strong> لا يتم تحديد أي ملف LOGICOM تلقائياً للملفات الجديدة لتفادي أخطاء الاستيراد مع تنبيه إلزامية الاختيار.</li>
+            <li><strong>كشف ذكي للفواتير المكررة :</strong> المطابقة حسب التاريخ، الملف، المورد في LOGI-G50، البند النظامي والمبلغ خارج الرسم (HT) مع مراعاة هامش التسامح المضبوط في نافذة المشتريات.</li>
+            <li><strong>جدول مطور للاستيراد :</strong> شريط تصفية، تجميع حسب الشهر، مجاميع أسفل الجدول، تنبيهات بصرية عند نقص NIF أو وجود فارق في TTC، وحفظ أبعاد وموضع النافذة تلقائياً.</li>
+            <li><strong>مزامنة التواريخ مع السنة المالية :</strong> ضبط حقلي <em>Date Du</em> و <em>Date Au</em> تلقائياً وفق السنة المالية المختارة (2025 أو 2026 مثلاً).</li>
+            <li><strong>تحسينات الواجهة :</strong> نقل زر الاستيراد للأعلى مع أيقونات وتلميح توضيحي، توحيد خلفية القائمة الجانبية مع الثيم وإصلاح أخطاء إملائية في نافذة المشتريات.</li>
+        </ul>
     </div>
 
     <!-- Section 1 : Importation Directe depuis LOGI-COM (Bleu) -->

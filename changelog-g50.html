@@ -198,15 +198,15 @@
         <div class="header-main">
             <!-- Français -->
             <div class="lang-fr">
-                <span class="badge">Nouveautés v1.0.4</span>
+                <span class="badge">Nouveautés v1.0.5</span>
                 <h1>LOGI-G50 — Notes de Version</h1>
-                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0.4</p>
+                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0.5</p>
             </div>
             <!-- Arabe -->
             <div class="lang-ar">
-                <span class="badge">الجديد في الإصدار v1.0.4</span>
+                <span class="badge">الجديد في الإصدار v1.0.5</span>
                 <h1>لوجي جي 50 (LOGI-G50) — تفاصيل الإصدار الجديد</h1>
-                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0.4</p>
+                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0.5</p>
             </div>
         </div>
 
@@ -214,6 +214,30 @@
             <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
             <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
         </div>
+    </div>
+
+    <!-- Section 00 : Correctifs v1.0.5 (Bleu) -->
+    <div class="card c-blue">
+        <div class="card-header-line">
+            <div class="card-title c-blue">
+                <span class="lang-fr">🛠️ Correctifs Import LOGICOM & Mise à jour (v1.0.5)</span>
+                <span class="lang-ar">🛠️ إصلاحات استيراد LOGICOM والتحديث التلقائي (v1.0.5)</span>
+            </div>
+            <span class="legend-tag cat-blue">
+                <span class="lang-fr">Correctif v1.0.5</span>
+                <span class="lang-ar">تحديث v1.0.5</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Détection de version corrigée :</strong> Le système de mise à jour lit désormais dynamiquement la version installée et confirme que le logiciel est à jour après installation.</li>
+            <li><strong>Filtre des doublons LOGICOM affiné :</strong> Comparaison basée uniquement sur le numéro de facture, la date de facture, le fournisseur et le montant HT (avec tolérance configurée), sans restriction par rubrique système.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>إصلاح التحقق من الإصدار :</strong> يقرأ نظام التحديث الآن رقم الإصدار المثبت تلقائياً ويؤكد أن البرنامج محدث بعد التثبيت.</li>
+            <li><strong>تحسين تصفية الفواتير المكررة في LOGICOM :</strong> المطابقة تعتمد فقط على رقم الفاتورة، تاريخ الفاتورة، المورد والمبلغ خارج الرسم (مع هامش التسامح)، دون التقييد بالبند النظامي.</li>
+        </ul>
     </div>
 
     <!-- Section 0 : Nouveautés v1.0.4 (Bleu) -->

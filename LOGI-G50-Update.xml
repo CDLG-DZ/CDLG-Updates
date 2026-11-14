@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <item>
-    <version>1.0.2</version>
-    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.2-g50/LOGI-G50_v1.0.2.zip</url>
+    <version>1.0.3</version>
+    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.3-g50/LOGI-G50_v1.0.3.zip</url>
     <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog-g50.html</changelog>
     <mandatory>false</mandatory>
-    <checksum algorithm="SHA256">4471D42B9738CF14E02108154FE69E3A4AF70667F88E6577F6E6D7D9407CC563</checksum>
+    <checksum algorithm="SHA256">AD3E7E2B06A7C34D21ADB467AD70E6B9AE97486D114DB849BA90B74B9949F51A</checksum>
 </item>

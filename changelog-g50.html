@@ -198,15 +198,15 @@
         <div class="header-main">
             <!-- Français -->
             <div class="lang-fr">
-                <span class="badge">Nouveautés v1.0.2</span>
+                <span class="badge">Nouveautés v1.0.3</span>
                 <h1>LOGI-G50 — Notes de Version</h1>
-                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0.2</p>
+                <p class="subtitle">Gestion des Déclarations Fiscales & Déclarations G50 — CDLG v1.0.3</p>
             </div>
             <!-- Arabe -->
             <div class="lang-ar">
-                <span class="badge">الجديد في الإصدار v1.0.2</span>
+                <span class="badge">الجديد في الإصدار v1.0.3</span>
                 <h1>لوجي جي 50 (LOGI-G50) — تفاصيل الإصدار الجديد</h1>
-                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0.2</p>
+                <p class="subtitle">إدارة التصريحات الجبائية G50 ونظام CDLG المعتمد v1.0.3</p>
             </div>
         </div>
 
@@ -214,6 +214,58 @@
             <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
             <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
         </div>
+    </div>
+
+    <!-- Section 1 : Importation Directe depuis LOGI-COM (Bleu) -->
+    <div class="card c-blue">
+        <div class="card-header-line">
+            <div class="card-title c-blue">
+                <span class="lang-fr">🔗 Importation Directe des Achats depuis LOGI-COM</span>
+                <span class="lang-ar">🔗 استيراد المشتريات مباشرة من برنامج LOGI-COM</span>
+            </div>
+            <span class="legend-tag cat-blue">
+                <span class="lang-fr">Nouveau</span>
+                <span class="lang-ar">جديد</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Importation sans fichier Excel :</strong> Nouveau bouton <em>Importer LOGICOM</em> dans la fenêtre Achats avec sélection du dossier (Code + Dénomination), de l'exercice, de la période et de la rubrique G50.</li>
+            <li><strong>Mémorisation intelligente par dossier :</strong> Vos choix de types d'achat (<em>Facture</em>, <em>Facture d'avoir</em>, etc.), de dossier LOGICOM et de rubrique sont sauvegardés automatiquement pour chaque dossier.</li>
+            <li><strong>Contrôle anti-doublon & validation des nouveaux tiers :</strong> Détection automatique des fournisseurs (NIF, RC, NIS, AI, Dénomination) avec fenêtre de validation avant création dans LOGI-G50.</li>
+            <li><strong>Saisie fluide :</strong> Navigation rapide avec la touche <em>Entrée</em> et saisie automatique <em>Jour → Mois → Année</em> sur les dates.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>استيراد مباشر بدون ملف Excel :</strong> زر جديد <em>Importer LOGICOM</em> في نافذة المشتريات مع اختيار الملف (الرمز + التسمية)، السنة المالية، الفترة والبند G50.</li>
+            <li><strong>حفظ تلقائي لكل ملف :</strong> حفظ اختيار أنواع الفواتير (فاتورة، فاتورة تعديل...) والملف والبند بشكل مستقل لكل ملف.</li>
+            <li><strong>حماية من التكرار والتحقق من الموردين الجدد :</strong> فحص تلقائي للمتعاملين (NIF، السجل التجاري، NIS، التسمية) مع نافذة تأكيد قبل إضافتهم إلى LOGI-G50.</li>
+            <li><strong>تنقل سريع :</strong> الانتقال عبر زر <em>Entrée</em> وإدخال سلس للتواريخ (اليوم ← الشهر ← السنة).</li>
+        </ul>
+    </div>
+
+    <!-- Section 2 : Import Excel Universel 2007-2026 (Violet) -->
+    <div class="card c-purple">
+        <div class="card-header-line">
+            <div class="card-title c-purple">
+                <span class="lang-fr">📊 Importation Excel Universelle (2007 à 2026)</span>
+                <span class="lang-ar">📊 استيراد ملفات Excel الشامل (2007 إلى 2026)</span>
+            </div>
+            <span class="legend-tag cat-purple">
+                <span class="lang-fr">Amélioration</span>
+                <span class="lang-ar">تحسين</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Zéro dépendance à Microsoft Excel :</strong> Nouveau moteur de lecture autonome compatible avec tous les formats (<code>.xls</code>, <code>.xlsx</code>, <code>.xlsm</code>, <code>.xlsb</code>) même sans Office installé.</li>
+            <li><strong>Tolérance multi-formats :</strong> Extraction fiable des cellules au format Texte, Numérique, Monétaire, Pourcentage ou Date, avec nettoyage automatique des espaces et arrondis à 2 décimales.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>استقلالية تامة عن برنامج Excel :</strong> محرك قراءة جديد يدعم جميع الإصدارات (<code>.xls</code>، <code>.xlsx</code>، <code>.xlsm</code>، <code>.xlsb</code>) حتى في حال عدم تثبيت Microsoft Office.</li>
+            <li><strong>قراءة ذكية لمختلف التنسيقات :</strong> استخراج دقيق للخلايا النصية، الرقمية، النقدية، النسب المئوية والتواريخ مع تنقية تلقائية للفراغات وتقريب المبالغ.</li>
+        </ul>
     </div>
 
     <!-- Section 1 : Extraction CNRC & Adresses Complètes (Bleu) -->

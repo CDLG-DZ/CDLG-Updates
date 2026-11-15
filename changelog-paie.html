@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notes de mise à jour - LOGI-PAIE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Traditional Arabic', sans-serif;
+            margin: 0;
+            padding: 14px 18px;
+            background: #f8fafc;
+            color: #1e293b;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #8b5cf6;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .header-main {
+            flex: 1;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: #e2e8f0;
+            padding: 3px;
+            border-radius: 20px;
+            border: 1px solid #cbd5e1;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #475569;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: #ffffff;
+            color: #5b21b6;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        .lang-btn:hover:not(.active) {
+            background: rgba(255,255,255,0.6);
+            color: #0f172a;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        h1 {
+            font-size: 17px;
+            color: #0f172a;
+            margin: 3px 0 2px 0;
+            font-weight: 700;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .legend-tag {
+            display: inline-flex;
+            align-items: center;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .cat-purple {
+            background: #faf5ff;
+            color: #6b21a8;
+            border: 1px solid #e9d5ff;
+        }
+        .cat-purple .legend-dot { background: #8b5cf6; }
+
+        .cat-blue {
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+        }
+        .cat-blue .legend-dot { background: #3b82f6; }
+
+        .cat-green {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .cat-green .legend-dot { background: #10b981; }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            position: relative;
+        }
+
+        body[dir="ltr"] .card.c-blue   { border-left: 4px solid #3b82f6; }
+        body[dir="ltr"] .card.c-purple { border-left: 4px solid #8b5cf6; }
+        body[dir="ltr"] .card.c-green  { border-left: 4px solid #10b981; }
+
+        body[dir="rtl"] .card.c-blue   { border-right: 4px solid #3b82f6; border-left: 1px solid #e2e8f0; }
+        body[dir="rtl"] .card.c-purple { border-right: 4px solid #8b5cf6; border-left: 1px solid #e2e8f0; }
+        body[dir="rtl"] .card.c-green  { border-right: 4px solid #10b981; border-left: 1px solid #e2e8f0; }
+
+        body[dir="rtl"] .legend-dot {
+            margin-right: 0;
+            margin-left: 6px;
+        }
+
+        .card-header-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .card-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .card-title.c-blue   { color: #1e40af; }
+        .card-title.c-purple { color: #6b21a8; }
+        .card-title.c-green  { color: #065f46; }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        body[dir="rtl"] ul {
+            padding-left: 0;
+            padding-right: 18px;
+        }
+        li {
+            margin-bottom: 6px;
+            color: #334155;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+        li strong {
+            color: #0f172a;
+        }
+
+        .footer {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px dashed #cbd5e1;
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        body[data-lang="fr"] .lang-ar { display: none !important; }
+        body[data-lang="ar"] .lang-fr { display: none !important; }
+    </style>
+</head>
+<body dir="ltr" data-lang="fr">
+
+    <div class="header">
+        <div class="header-main">
+            <div class="lang-fr">
+                <span class="badge">Nouveautés v1.0.0</span>
+                <h1>LOGI-PAIE — Notes de Version</h1>
+                <p class="subtitle">Gestion de la Paie & Ressources Humaines — CDLG</p>
+            </div>
+            <div class="lang-ar">
+                <span class="badge">الجديد في الإصدار v1.0.0</span>
+                <h1>لوجي باي (LOGI-PAIE) — تفاصيل الإصدار</h1>
+                <p class="subtitle">تسيير الأجور والموارد البشرية — نظام CDLG المعتمد</p>
+            </div>
+        </div>
+
+        <div class="lang-switch">
+            <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
+            <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
+        </div>
+    </div>
+
+    <div class="card c-green">
+        <div class="card-header-line">
+            <div class="card-title c-green">
+                <span class="lang-fr">🚀 Mise à Jour Automatique en 1 Clic</span>
+                <span class="lang-ar">🚀 التحديث التلقائي المباشر بضغطة زر</span>
+            </div>
+            <span class="legend-tag cat-green">
+                <span class="lang-fr">Système</span>
+                <span class="lang-ar">النظام</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Vérification automatique & manuelle :</strong> Nouveau bouton <em>Mise à jour</em> directement accessible dans le ruban (<em>Accueil &gt; Aide</em>) ainsi que dans <em>Fichiers &gt; Vérifier les mises à jour</em>.</li>
+            <li><strong>Conservation des paramètres :</strong> Tous vos réglages (serveur SQL, instance, port, thème et préférences) sont préservés automatiquement après chaque mise à jour.</li>
+            <li><strong>Téléchargement léger et sécurisé :</strong> Seuls les fichiers essentiels sont téléchargés avec vérification d'intégrité SHA-256.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>فحص تلقائي ويدوي للتحديثات :</strong> إضافة زر <em>Mise à jour</em> مباشرة في الشريط الرئيسي وضمن قائمة الملفات.</li>
+            <li><strong>حفظ الإعدادات تلقائياً :</strong> جميع إعدادات الخادم والاتصال والتفضيلات تبقى محفوظة بعد كل تحديث دون إعادة ضبط.</li>
+            <li><strong>تحميل خفيف وآمن :</strong> يتم تنزيل الملفات الأساسية فقط مع التحقق التلقائي من السلامة SHA-256.</li>
+        </ul>
+    </div>
+
+    <div class="card c-blue">
+        <div class="card-header-line">
+            <div class="card-title c-blue">
+                <span class="lang-fr">🛠️ Stabilité & Correctifs</span>
+                <span class="lang-ar">🛠️ الاستقرار والإصلاحات</span>
+            </div>
+            <span class="legend-tag cat-blue">
+                <span class="lang-fr">Fiabilité</span>
+                <span class="lang-ar">الموثوقية</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Ouverture des écrans et impressions :</strong> Correction des conflits de ressources sur les formulaires, états de paie et documents à imprimer.</li>
+            <li><strong>Données géographiques à jour :</strong> Mise à jour intégrée des Wilayas et Communes lors de la création et l'ouverture des dossiers.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>استقرار النوافذ والطباعة :</strong> إصلاح تعارض الموارد لضمان فتح جميع النوافذ وكشوف الأجور والوثائق بدون أخطاء.</li>
+            <li><strong>تحديث الولايات والبلديات :</strong> تحديث تلقائي لقائمة الولايات والبلديات المعتمدة عند إنشاء أو فتح الملفات.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        CDLG Informatique • Gamme Professionnelle de Gestion • Tous droits réservés
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            document.getElementById('btn-fr').className = 'lang-btn' + (lang === 'fr' ? ' active' : '');
+            document.getElementById('btn-ar').className = 'lang-btn' + (lang === 'ar' ? ' active' : '');
+        }
+    </script>
+</body>
+</html>

@@ -196,12 +196,12 @@
     <div class="header">
         <div class="header-main">
             <div class="lang-fr">
-                <span class="badge">Nouveautés v1.0.0</span>
+                <span class="badge">Nouveautés v1.0.1</span>
                 <h1>LOGI-PAIE — Notes de Version</h1>
                 <p class="subtitle">Gestion de la Paie & Ressources Humaines — CDLG</p>
             </div>
             <div class="lang-ar">
-                <span class="badge">الجديد في الإصدار v1.0.0</span>
+                <span class="badge">الجديد في الإصدار v1.0.1</span>
                 <h1>لوجي باي (LOGI-PAIE) — تفاصيل الإصدار</h1>
                 <p class="subtitle">تسيير الأجور والموارد البشرية — نظام CDLG المعتمد</p>
             </div>
@@ -211,6 +211,31 @@
             <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
             <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
         </div>
+    </div>
+
+    <div class="card c-purple">
+        <div class="card-header-line">
+            <div class="card-title c-purple">
+                <span class="lang-fr">🏦 Virements Bancaires & Exports Excel</span>
+                <span class="lang-ar">🏦 التحويلات البنكية وتصدير ملفات Excel</span>
+            </div>
+            <span class="legend-tag cat-purple">
+                <span class="lang-fr">Nouveauté v1.0.1</span>
+                <span class="lang-ar">جديد v1.0.1</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Nouvelle banque prise en charge — Algeria Gulf Bank (AGB) :</strong> Ajout du modèle d'export Excel AGB directement dans <em>Émargement &gt; Virement &gt; Excel</em> (lignes <code>D</code> employeur et <code>C</code> salariés, découpage RIB complet, option Dinars / Centimes).</li>
+            <li><strong>Génération Excel 100 % autonome :</strong> L'export AGB fonctionne directement sans nécessiter l'installation de Microsoft Office sur le poste client, avec création automatique du modèle par défaut et ouverture directe en fin de traitement.</li>
+            <li><strong>Contrôles & messages clairs :</strong> Vérification des RIB (20 chiffres et clé) et affichage de messages explicites en cas d'anomalie.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>إضافة بنك جديد — بنك الخليج الجزائر (AGB) :</strong> إضافة نموذج التصدير الخاص ببنك AGB مباشرة ضمن <em>Émargement &gt; Virement &gt; Excel</em> (سطر المدين <code>D</code> للمؤسسة وأسطر الدائنين <code>C</code> للموظفين، مع خيار الدينار أو السنتيم).</li>
+            <li><strong>توليد ملفات Excel بشكل مستقل :</strong> يعمل التصدير مباشرة دون الحاجة لتثبيت Microsoft Office، مع إنشاء النموذج الافتراضي تلقائياً وإمكانية فتح الملف فور انتهاء المعالجة.</li>
+            <li><strong>تدقيق ورسائل واضحة :</strong> التحقق من صحة أرقام الحسابات البنكية (RIB من 20 رقماً) وعرض رسائل خطأ واضحة ومفهومة.</li>
+        </ul>
     </div>
 
     <div class="card c-green">

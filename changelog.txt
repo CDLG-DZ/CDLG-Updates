@@ -1,27 +1,33 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.2
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.3
 ======================================================================
 
-Cette version 1.3.2 apporte une refonte majeure et la fiabilisation complète
-du module d'extraction des données commerciales CNRC (Sidjilcom) :
+Cette version 1.3.3 apporte le nouveau module de génération et d'export
+Excel des écritures comptables ainsi que plusieurs améliorations de
+stabilité et d'ergonomie :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.2)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.3)
 ----------------------------------------------------------------------
-• Module CNRC Sidjilcom nouvelle génération :
-  - Recherche bidirectionnelle intelligente (par N° RC ou par Raison Sociale).
-  - Décomposition universelle des formats de registres de commerce algériens
-    (souches principales, secondaires avec wilayas permutées, formats historiques).
-  - Prise en charge complète des établissements secondaires (Personnes Morales
-    et Personnes Physiques).
-  - Détection précise de l'état officiel du registre (Radié, Actif/Conforme,
-    Actif/Non conforme) avec avertissement interactif de confirmation.
+• Génération & Export Excel des Écritures Comptables (Achats & Ventes) :
+  - Nouvelle interface unifiée accessible depuis le menu Comptabilité.
+  - Visualisation des documents filtrés par période, type et dépôts.
+  - Contrôle obligatoire de l'équilibre comptable (Débit = Crédit)
+    avec signalement automatique des anomalies.
+  - Export direct au format Excel (.xlsx) avec en-têtes multi-lignes
+    prêt pour l'importation en comptabilité.
 
-• Fiche Tiers & Fiche Dossier :
-  - Règle métier : Priorité absolue accordée au Nom Commercial pour les PP.
-  - Contrôle proactif anti-doublon sur le NIF dès la validation de la recherche.
-  - Mapping automatique des identifiants réels de Wilayas et Communes.
-  - Remplissage automatique et harmonisé du régime juridique.
+• Référentiel Comptable & Gestion des Documents :
+  - Refonte et uniformisation de la table dbo.PCN (8 lignes principales
+    pour les Achats et 8 lignes principales pour les Ventes, sens
+    inversés automatiques sur les avoirs et retours).
+  - Correction de l'affichage de la table PCN lors de la sélection
+    d'un en-tête de groupe dans la gestion des documents.
+
+• Ergonomie & Performances :
+  - Simplification des écrans Produits et Paramètres Exercice.
+  - Vérification réseau préalable sur la télémétrie et la licence pour
+    un démarrage instantané sans erreur en arrière-plan.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

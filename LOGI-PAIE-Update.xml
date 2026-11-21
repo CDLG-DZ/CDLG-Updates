@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item>
-    <version>1.0.4</version>
-    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.4-paie/LOGI-PAIE_v1.0.4.zip</url>
+    <version>1.0.5</version>
+    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.0.5-paie/LOGI-PAIE_v1.0.5.zip</url>
     <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog-paie.html</changelog>
     <mandatory>false</mandatory>
-    <checksum algorithm="SHA256">78C4E96B99CD0BBEBC19807914471AB6B10B492A671F8E85F428B77E907F717A</checksum>
+    <checksum algorithm="SHA256">D590D74E3A6F8BDA295B64AE67F5C031254570CF6EFF26CC4624C3D2867AC2D0</checksum>
 </item>

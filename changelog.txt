@@ -2,28 +2,25 @@
                   LOGI COM - NOTES DE MISE À JOUR v1.3.5
 ======================================================================
 
-Cette version 1.3.5 fiabilise le moteur de recalcul des coûts de
-sortie (CUMP), la valorisation des avoirs et transferts inter-dépôts,
-ainsi que le calcul des marges commerciales :
+Cette version 1.3.5 optimise la valorisation des stocks (CUMP), la
+synchronisation des transferts inter-dépôts ainsi que la précision des
+indicateurs de marge commerciale :
 
 ----------------------------------------------------------------------
 🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.5)
 ----------------------------------------------------------------------
-• Fiabilisation du recalcul des coûts de sortie (CUMP) :
-  - Correction de l'ordre journalier entre les avoirs clients,
-    transferts et factures de vente pour éviter les coûts à zéro et
-    les valeurs résiduelles lorsque le stock revient à 0.
-  - Conservation du CUMP en cas de stock négatif temporaire.
-  - Protection contre les coûts négatifs sur les retours fournisseurs
-    et purge des résidus d'arrondi lorsque le stock est nul.
+• Valorisation avancée des stocks (CUMP) :
+  - Traitement encore plus précis des mouvements quotidiens (avoirs
+    clients, transferts et factures de vente) pour une valorisation
+    comptable parfaitement alignée.
+  - Synchronisation automatique et harmonisée des coûts entre dépôts
+    expéditeurs et destinataires.
 
-• Transferts inter-dépôts & Marges commerciales :
-  - Propagation automatique des coûts mis à jour vers les dépôts
-    destinataires (priorité systématique des entrées avant les sorties).
-  - Alignement du calcul des ratios de marge sur le montant net après
-    remises et protection contre les valeurs nulles.
-  - Recalcul plus sûr et plus rapide depuis le bouton « Corriger coûts »
-    du tableau de bord, sans risque de blocage.
+• Pilotage commercial & Ergonomie :
+  - Précision renforcée du calcul des marges et taux de marge sur le
+    montant net après remises.
+  - Performances accrues lors de l'actualisation des coûts depuis le
+    tableau de bord en un seul clic.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

@@ -1,37 +1,29 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.4
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.5
 ======================================================================
 
-Cette version 1.3.4 apporte une refonte complète de la fenêtre
-Dossier d'Importation ainsi que des améliorations de fiabilité et
-d'ergonomie :
+Cette version 1.3.5 fiabilise le moteur de recalcul des coûts de
+sortie (CUMP), la valorisation des avoirs et transferts inter-dépôts,
+ainsi que le calcul des marges commerciales :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.4)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.5)
 ----------------------------------------------------------------------
-• Fiabilisation complète des Dossiers d'Importation :
-  - Recalcul automatique et en temps réel des charges réparties,
-    coûts unitaires, montants HT, TVA et TTC dès la modification
-    d'une quantité, d'un colisage, de l'assiette D10, du taux de TVA
-    ou des frais et taxes annexes.
-  - Verrouillage en lecture seule des colonnes calculées (Quantité
-    finale, Charge, Coût unitaire, HT, TVA, TTC) pour garantir la
-    cohérence avec le stock.
-  - Contrôle renforcé des saisies (quantités strictement positives,
-    numéros de lots obligatoires si gérés, cohérence des dates de
-    péremption) et prise en compte de l'exonération TVA fournisseur.
-  - Respect des droits utilisateur et de l'état de verrouillage des
-    documents.
+• Fiabilisation du recalcul des coûts de sortie (CUMP) :
+  - Correction de l'ordre journalier entre les avoirs clients,
+    transferts et factures de vente pour éviter les coûts à zéro et
+    les valeurs résiduelles lorsque le stock revient à 0.
+  - Conservation du CUMP en cas de stock négatif temporaire.
+  - Protection contre les coûts négatifs sur les retours fournisseurs
+    et purge des résidus d'arrondi lorsque le stock est nul.
 
-• Ergonomie & Raccourcis Clavier :
-  - Alignement des raccourcis sur les documents d'achat : F12 ou +
-    pour ajouter une nouvelle ligne, Ctrl + Suppr / Suppr pour
-    supprimer une ligne, avec indicateur [F12] / [+] en gris sur la
-    ligne d'ajout.
-  - Sélection fluide des articles avec passage automatique à la
-    quantité dès la validation par Entrée.
-  - Correction de la saisie en direct des frais de transit, transport,
-    autres frais et taxes annexes.
+• Transferts inter-dépôts & Marges commerciales :
+  - Propagation automatique des coûts mis à jour vers les dépôts
+    destinataires (priorité systématique des entrées avant les sorties).
+  - Alignement du calcul des ratios de marge sur le montant net après
+    remises et protection contre les valeurs nulles.
+  - Recalcul plus sûr et plus rapide depuis le bouton « Corriger coûts »
+    du tableau de bord, sans risque de blocage.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

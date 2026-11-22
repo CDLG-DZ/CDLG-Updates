@@ -205,13 +205,13 @@
         <div class="header-main">
             <!-- Français -->
             <div class="lang-fr">
-                <span class="badge">Mise à jour v1.3.3</span>
+                <span class="badge">Mise à jour v1.3.4</span>
                 <h1>LOGI COM — Notes de Version</h1>
                 <p class="subtitle">Déploiement officiel et optimisations certifiées CDLG</p>
             </div>
             <!-- Arabe -->
             <div class="lang-ar">
-                <span class="badge">تحديث البرنامج v1.3.3</span>
+                <span class="badge">تحديث البرنامج v1.3.4</span>
                 <h1>لوجي كوم (LOGI COM) — تفاصيل الإصدار الجديد</h1>
                 <p class="subtitle">التوزيع الرسمي والتحسينات المعتمدة من شركة CDLG للبرمجيات</p>
             </div>
@@ -222,6 +222,68 @@
             <button type="button" class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
             <button type="button" class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">🇩🇿 العربية</button>
         </div>
+    </div>
+
+    <!-- ==================== VERSION 1.3.4 ==================== -->
+    <div style="margin: 10px 0 6px 0;">
+        <span class="badge">v1.3.4</span>
+    </div>
+
+    <!-- Section 1 : Fonctions Métier & Options (Vert) -->
+    <div class="card c-green">
+        <div class="card-header-line">
+            <div class="card-title c-green">
+                <span class="lang-fr">🚀 Nouveautés & Fonctionnalités Métier</span>
+                <span class="lang-ar">🚀 الميزات والخيارات التجارية الجديدة</span>
+            </div>
+            <span class="legend-tag cat-green">
+                <span class="lang-fr">Options Métier</span>
+                <span class="lang-ar">خيارات تجارية</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Fiabilisation complète de la fenêtre Dossier d'Importation :</strong> Recalcul automatique et instantané des frais répartis, coûts unitaires, montants HT, TVA et TTC dès la modification d'une quantité, d'un colisage, d'une assiette D10, d'un taux de TVA ou des frais et taxes annexes.</li>
+            <li><strong>Protection des colonnes calculées &amp; cohérence du stock :</strong> Verrouillage en lecture seule de la quantité finale et des charges réparties afin d'éviter toute saisie contradictoire, calcul précis du colisage, contrôle obligatoire des quantités positives, des numéros de lots et des dates de péremption.</li>
+            <li><strong>Respect de l'exonération TVA et des droits d'accès :</strong> Prise en compte automatique de l'exonération de TVA du fournisseur dans les calculs d'importation, avec vérification des autorisations utilisateur et de l'état de verrouillage des documents.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>تطوير شامل لنافذة ملفات الاستيراد :</strong> إعادة حساب تلقائية وفورية لتوزيع المصاريف، وتكلفة الوحدة، والمبالغ خارج الرسم، والرسم على القيمة المضافة، والمبلغ الإجمالي فور تعديل الكمية أو التعبئة أو وعاء الجمارك (D10) أو نسبة الرسم أو المصاريف والرسوم الإضافية.</li>
+            <li><strong>حماية الأعمدة المحسوبة وضمان تناسق المخزون :</strong> قفل الكمية النهائية والمصاريف الموزعة للقراءة فقط لمنع أي إدخال متناقض، مع حساب دقيق للتعبئة ومراقبة إجبارية للكميات وأرقام الدفعات (Lots) وتواريخ انتهاء الصلاحية.</li>
+            <li><strong>احترام الإعفاء من الرسم وصلاحيات المستخدمين :</strong> أخذ الإعفاء من الرسم على القيمة المضافة للمورد بعين الاعتبار تلقائياً في حسابات الاستيراد، مع التحقق من صلاحيات المستخدم وحالة قفل الوثائق.</li>
+        </ul>
+    </div>
+
+    <!-- Section 2 : Ergonomie & Confort d'usage (Bleu) -->
+    <div class="card c-blue">
+        <div class="card-header-line">
+            <div class="card-title c-blue">
+                <span class="lang-fr">⚡ Ergonomie, Affichage & Confort</span>
+                <span class="lang-ar">⚡ السلاسة، العرض وراحة الاستخدام</span>
+            </div>
+            <span class="legend-tag cat-blue">
+                <span class="lang-fr">Confort & Affichage</span>
+                <span class="lang-ar">الراحة والعرض</span>
+            </span>
+        </div>
+
+        <ul class="lang-fr">
+            <li><strong>Saisie rapide au clavier dans les dossiers d'importation :</strong> Alignement des raccourcis sur les documents d'achat (<code>F12</code> ou <code>+</code> pour ajouter une nouvelle ligne, <code>Ctrl + Suppr</code> / <code>Suppr</code> pour supprimer une ligne) avec affichage discret <em>[F12] / [+]</em> sur la ligne d'ajout.</li>
+            <li><strong>Sélection fluide des articles :</strong> Ouverture automatique de la liste des articles et passage immédiat à la quantité après validation par la touche <em>Entrée</em> en une seule étape.</li>
+            <li><strong>Saisie fluide des frais et taxes :</strong> Correction de l'effacement intempestif lors de la saisie des frais de transit, transport, autres frais et taxes annexes.</li>
+        </ul>
+
+        <ul class="lang-ar">
+            <li><strong>إدخال سريع عبر لوحة المفاتيح في ملفات الاستيراد :</strong> توحيد الاختصارات مع وثائق الشراء (<code>F12</code> أو <code>+</code> لإضافة سطر جديد، و<code>Ctrl + Suppr</code> أو <code>Suppr</code> لحذف سطر) مع إظهار تلميح <em>[F12] / [+]</em> بلون رمادي هادئ في سطر الإضافة.</li>
+            <li><strong>اختيار سلس للمنتجات :</strong> فتح تلقائي لقائمة المنتجات وانتقال فوري إلى خانة الكمية بعد التأكيد بزر <em>Entrée</em> في خطوة واحدة.</li>
+            <li><strong>إدخال مستقر للمصاريف والرسوم :</strong> إصلاح اختفاء المبالغ أثناء إدخال مصاريف العبور والنقل والمصاريف والرسوم الإضافية.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== VERSION 1.3.3 ==================== -->
+    <div style="margin: 16px 0 6px 0;">
+        <span class="badge" style="background: #64748b;">v1.3.3</span>
     </div>
 
 

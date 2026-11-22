@@ -1,26 +1,19 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.5
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.6
 ======================================================================
 
-Cette version 1.3.5 optimise la valorisation des stocks (CUMP), la
-synchronisation des transferts inter-dépôts ainsi que la précision des
-indicateurs de marge commerciale :
+Cette version 1.3.6 optimise l'actualisation des exercices et renforce
+la fluidité de la valorisation des stocks (CUMP) :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.5)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.6)
 ----------------------------------------------------------------------
-• Valorisation avancée des stocks (CUMP) :
-  - Traitement encore plus précis des mouvements quotidiens (avoirs
-    clients, transferts et factures de vente) pour une valorisation
-    comptable parfaitement alignée.
-  - Synchronisation automatique et harmonisée des coûts entre dépôts
-    expéditeurs et destinataires.
-
-• Pilotage commercial & Ergonomie :
-  - Précision renforcée du calcul des marges et taux de marge sur le
-    montant net après remises.
-  - Performances accrues lors de l'actualisation des coûts depuis le
-    tableau de bord en un seul clic.
+• Actualisation optimisée des exercices :
+  - Exécution plus rapide et fluide lors de la mise à jour de
+    l'exercice et de la synchronisation des calculs de valorisation
+    de stock (CUMP).
+  - Amélioration continue de la réactivité lors de l'ouverture des
+    exercices et du suivi depuis le tableau de bord.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

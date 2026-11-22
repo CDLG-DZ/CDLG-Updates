@@ -1,33 +1,37 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.3
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.4
 ======================================================================
 
-Cette version 1.3.3 apporte le nouveau module de génération et d'export
-Excel des écritures comptables ainsi que plusieurs améliorations de
-stabilité et d'ergonomie :
+Cette version 1.3.4 apporte une refonte complète de la fenêtre
+Dossier d'Importation ainsi que des améliorations de fiabilité et
+d'ergonomie :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.3)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.4)
 ----------------------------------------------------------------------
-• Génération & Export Excel des Écritures Comptables (Achats & Ventes) :
-  - Nouvelle interface unifiée accessible depuis le menu Comptabilité.
-  - Visualisation des documents filtrés par période, type et dépôts.
-  - Contrôle obligatoire de l'équilibre comptable (Débit = Crédit)
-    avec signalement automatique des anomalies.
-  - Export direct au format Excel (.xlsx) avec en-têtes multi-lignes
-    prêt pour l'importation en comptabilité.
+• Fiabilisation complète des Dossiers d'Importation :
+  - Recalcul automatique et en temps réel des charges réparties,
+    coûts unitaires, montants HT, TVA et TTC dès la modification
+    d'une quantité, d'un colisage, de l'assiette D10, du taux de TVA
+    ou des frais et taxes annexes.
+  - Verrouillage en lecture seule des colonnes calculées (Quantité
+    finale, Charge, Coût unitaire, HT, TVA, TTC) pour garantir la
+    cohérence avec le stock.
+  - Contrôle renforcé des saisies (quantités strictement positives,
+    numéros de lots obligatoires si gérés, cohérence des dates de
+    péremption) et prise en compte de l'exonération TVA fournisseur.
+  - Respect des droits utilisateur et de l'état de verrouillage des
+    documents.
 
-• Référentiel Comptable & Gestion des Documents :
-  - Refonte et uniformisation de la table dbo.PCN (8 lignes principales
-    pour les Achats et 8 lignes principales pour les Ventes, sens
-    inversés automatiques sur les avoirs et retours).
-  - Correction de l'affichage de la table PCN lors de la sélection
-    d'un en-tête de groupe dans la gestion des documents.
-
-• Ergonomie & Performances :
-  - Simplification des écrans Produits et Paramètres Exercice.
-  - Vérification réseau préalable sur la télémétrie et la licence pour
-    un démarrage instantané sans erreur en arrière-plan.
+• Ergonomie & Raccourcis Clavier :
+  - Alignement des raccourcis sur les documents d'achat : F12 ou +
+    pour ajouter une nouvelle ligne, Ctrl + Suppr / Suppr pour
+    supprimer une ligne, avec indicateur [F12] / [+] en gris sur la
+    ligne d'ajout.
+  - Sélection fluide des articles avec passage automatique à la
+    quantité dès la validation par Entrée.
+  - Correction de la saisie en direct des frais de transit, transport,
+    autres frais et taxes annexes.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

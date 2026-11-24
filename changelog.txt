@@ -1,19 +1,27 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.6
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.7
 ======================================================================
 
-Cette version 1.3.6 optimise l'actualisation des exercices et renforce
-la fluidité de la valorisation des stocks (CUMP) :
+Cette version 1.3.7 enrichit la génération des écritures comptables,
+harmonise les écrans commerciaux et renforce le confort de saisie :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.6)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.7)
 ----------------------------------------------------------------------
-• Actualisation optimisée des exercices :
-  - Exécution plus rapide et fluide lors de la mise à jour de
-    l'exercice et de la synchronisation des calculs de valorisation
-    de stock (CUMP).
-  - Amélioration continue de la réactivité lors de l'ouverture des
-    exercices et du suivi depuis le tableau de bord.
+• Génération avancée des écritures comptables (Achats & Ventes) :
+  - Affichage aligné uniquement sur les écritures actives (zéro colonne vide).
+  - Export Excel directement lisible et nommé par code dossier et exercice.
+  - Modèle de libellé personnalisable avec balises et mémorisation automatique.
+  - Édition rapide en masse dans l'aperçu (Ctrl+D, Ctrl+Entrée, clic droit).
+• Paramétrage comptable enrichi (Gestion des documents) :
+  - Code journal par défaut configurable par type de document.
+  - Option "Avec Tiers" par compte pour reporter le code tiers sur
+    plusieurs lignes d'une même pièce.
+• Harmonisation Ventes, Achats, Transferts & Production :
+  - Modification sécurisée des dates avec contrôle de cohérence de stock.
+  - Gestion multi-sélection des alertes doublons depuis l'accueil.
+  - Confort de saisie clavier renforcé et affichage permanent des
+    références articles sur l'historique.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

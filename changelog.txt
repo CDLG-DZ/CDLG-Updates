@@ -1,34 +1,27 @@
 ======================================================================
-                  LOGI COM - NOTES DE MISE À JOUR v1.3.8
+                  LOGI COM - NOTES DE MISE À JOUR v1.3.9
 ======================================================================
 
-Cette version 1.3.8 introduit le journal d'audit complet, le contrôle
-de conformité fiscale des tiers, la diffusion multi-dossiers du
-paramétrage comptable et renforce la sécurité ainsi que le confort
-d'utilisation sur l'ensemble des modules :
+Cette version 1.3.9 enrichit la Vérification de conformité fiscale des
+tiers avec l'édition directe en ligne, le contrôle NIF (DGI) et
+SIDJILCOM (CNRC), et intègre l'assistant guidé bilingue Windows 11 :
 
 ----------------------------------------------------------------------
-🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.8)
+🚀 NOUVEAUTÉS & AMÉLIORATIONS (v1.3.9)
 ----------------------------------------------------------------------
-• Journal d'audit & traçabilité complète :
-  - Suivi chronologique des opérations et actions utilisateurs.
-  - Filtres par période, recherche rapide et exportation dédiée.
-• Conformité fiscale des tiers & État 104 :
-  - Vérification centralisée des identifiants fiscaux (Clients &
-    Fournisseurs) avec édition directe, gestion des exceptions et
-    export Excel.
-• Diffusion multi-dossiers du paramétrage comptable :
-  - Déploiement rapide de votre configuration comptable vers
-    plusieurs dossiers et exercices simultanément.
-• Sécurité & droits utilisateurs renforcés :
-  - Gestion affinée des autorisations par profil et protection
-    accrue des accès.
-• Fiches de stock, états de ventes & ergonomie :
-  - Consultation optimisée des fiches de stock détaillées (par
-    article et par dépôt) et des états de ventes (par client,
-    famille et dépôt).
-  - Confort de saisie, d'impression et de navigation harmonisé sur
-    Ventes, Achats, Trésorerie, Stock et Production.
+• Vérification & Conformité fiscale des tiers enrichie :
+  - Édition directe en ligne dans le tableau (Dénomination, N° RC,
+    NIF, NIS, Art. d'Imposition, NIN, N° BP, Adresse, Activité) avec
+    validation instantanée, repérage visuel des cellules à compléter
+    et passage au vert dès mise en conformité.
+  - Bouton "Vérifier NIF (DGI)" intégré (contrôle unitaire avec mise
+    à jour directe ou contrôle en lot avec barre de progression).
+  - Bouton "SIDJILCOM (CNRC)" intégré pour importer directement les
+    informations officielles du Registre de Commerce.
+• Accompagnement fluide des mises à jour sous Windows 11 :
+  - Assistant visuel bilingue (Français / Arabe) guidant pas à pas
+    l'utilisateur sur Windows 11 pour des mises à jour en toute
+    autonomie.
 
 ----------------------------------------------------------------------
 ⚡ SÉCURITÉ & PERFORMANCES

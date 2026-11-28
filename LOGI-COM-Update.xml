@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <item>
-    <version>1.3.7</version>
-    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.3.7/LOGI-COM_v1.3.7.zip</url>
+    <version>1.3.8</version>
+    <url>https://github.com/CDLG-DZ/CDLG-Updates/releases/download/v1.3.8/LOGI-COM_v1.3.8.zip</url>
     <changelog>https://cdlg-dz.github.io/CDLG-Updates/changelog.html</changelog>
     <mandatory>false</mandatory>
-    <checksum algorithm="SHA256">54430863DFDC0B0D3AD0BE145B4003A9C17A630A8356799ADE19B2AB90E63462</checksum>
+    <checksum algorithm="SHA256">C3205D5F993ACB830C853298C876290B9BFD38E21AF9AC786DFAE135C6879BE0</checksum>
 </item>
